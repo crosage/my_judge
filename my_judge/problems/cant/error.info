@@ -1,0 +1,4 @@
+ha.cpp:4:1: error: expected initializer before ‘}’ token
+    4 | }
+      | ^
+ha.cpp:4:1: error: expected declaration before ‘}’ token

@@ -1,0 +1,3 @@
+/home/krosa/my_judge/build/CMakeFiles/rebuild_cache.dir
+/home/krosa/my_judge/build/CMakeFiles/edit_cache.dir
+/home/krosa/my_judge/build/CMakeFiles/myjudge.dir

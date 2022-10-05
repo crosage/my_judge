@@ -1,0 +1,35 @@
+{
+    "cpu_time": 0,
+    "real_time": 3,
+    "memory": 3532,
+    "exit_code": 0,
+    "result": 0
+}
+{
+    "cpu_time": 59,
+    "real_time": 120,
+    "memory": 3540,
+    "exit_code": 0,
+    "result": 0
+}
+{
+    "cpu_time": 165,
+    "real_time": 166,
+    "memory": 7620,
+    "exit_code": 31,
+    "result": 4
+}
+{
+    "cpu_time": 120,
+    "real_time": 160,
+    "memory": 7624,
+    "exit_code": 31,
+    "result": 4
+}
+{
+    "cpu_time": 166,
+    "real_time": 177,
+    "memory": 7536,
+    "exit_code": 31,
+    "result": 4
+}

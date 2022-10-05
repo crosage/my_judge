@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/myjudge.dir/src/c_cpp.cpp.o"
+  "CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.o"
   "CMakeFiles/myjudge.dir/src/commons.cpp.o"
   "CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.o"
   "CMakeFiles/myjudge.dir/src/guard.cpp.o"

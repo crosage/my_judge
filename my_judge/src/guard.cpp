@@ -1,13 +1,13 @@
-#include"guard.h"
+#include "guard.h"
+#include "commons.h"
 #include<stdlib.h>
 #include<unistd.h>
 #include<cstdio>
 int FORBIDDEN_LIST[]={
     SCMP_SYS(fork),
-    SCMP_SYS(clone),
     SCMP_SYS(vfork),
-    SCMP_SYS(kill),
-    SCMP_SYS(socket)
+    SCMP_SYS(kill)
+//    SCMP_SYS(socket)
 };
 
 
@@ -26,7 +26,7 @@ int addSeccompRules(scmp_filter_ctx ctx)
     for(int i=0;i<len;i++)
     {
         if(seccomp_rule_add(ctx,SCMP_ACT_KILL,FORBIDDEN_LIST[i],0))
-            return 0;
+            return LOAD_SECCOMP_FAILED;
     }
     return 1;
 }

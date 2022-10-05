@@ -12,17 +12,13 @@ int main()
     string s;
 //    cin>>s;
     extern int errno;
-    char *argv[]={"python","/home/krosa/my_judge/problems/hell_word/hell_word.py",NULL};
-    char *envp[]={"PATH=/bin",0};
-    printf("%d\n",execve("/bin/bash -c ",argv,NULL));
+    char *argv[]={"java","-cp","../../problems/hell_word/","HelloWorld"};
+//    char *envp[]={"PATH=/bin",0};
+//    printf("%d\n",execve("/usr/bin/python3",argv,NULL));
     printf("%d\n",errno);
-    if(execve("/bin/bash -c ",argv,envp))
-    {
-        printf("hjkasdhjkladsadhjkls*****\n");
-    }
-/*    if(execve("../../problems/hell_word/hell_word.py",NULL,envp))
+    if(execve("/usr/bin/java",argv,NULL))
     {
         printf("hjkasdhjkladsadhjkls\n");
     }
     else printf("jklasdjlasfljfas\n");
-*/}
+}

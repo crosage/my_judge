@@ -32,13 +32,28 @@ chmod 777 ./build.sh
 }
 ```
 ## myjudge exit_code码
+
+- 0:无错误
+- 8:浮点数例外，出现除0
+- 9:超过真实时间限制被kill
+- 11:段错误
+- 24:触发setrlimit阈值被kill（时间或内存）
 - 31:选手代码包含危险代码
-- 
 
-
+## myjudge result码
+- -1:答案错误
+- 0:答案正确
+- 2:时间超限
+- 3:内存超限
+- 4:运行时错误
+- 5:系统错误
+- 6:浮点数例外
+- 7:找不到选手输出文件
+- 8:找不到标准输入文件
+- 9:编译错误
+- 10:非root用户
 ## 示例
 
 ``` sh
 sudo ./build/myjudge -t 3000 -c 3000 -p ./problems/hell_word/1.myout -r ./problems/hell_word/hell_word.py -i ./problems/hell_word/1.in -o ./problems/hell_word/1.out -l ./logger.txt -y
 ```
-

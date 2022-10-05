@@ -22,7 +22,6 @@ sudo ./build/myjudge -t 3000 -c 3000 '
     if(setOptions(argc,argv,&limit))
     {
         limit.loggerFile=fopen(limit.loggerPath,"a");
-        printf("py=%lld\n",limit.py);
         judge(&limit,&result);
         printf("{\n"
             "    \"cpu_time\": %d,\n"

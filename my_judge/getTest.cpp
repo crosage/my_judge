@@ -61,7 +61,8 @@ int main(int argc,char *argv[])
         string execPath="-r ./problems/MLE/MLE ";
         string memory="-m 5 ";
         string log="-l ./logger.txt ";
-        string tmp="sudo ./build/myjudge "+log+memory+Time+cpuTime+stdOutputPath+execPath+inputPath+outputPath+">>result";
+        string err="-e ./problems/MLE/data"+to_string(i)+".error ";
+        string tmp="sudo ./build/myjudge "+err+log+memory+Time+cpuTime+stdOutputPath+execPath+inputPath+outputPath+">>result";
         cout<<tmp<<" **getTest"<<endl;
         printf("%d\n",system(tmp.c_str()));
     }

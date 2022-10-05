@@ -21,24 +21,26 @@ enum RUNNING_CONDITION{
     memoryLimitError=-6,
     inputNotFound=-7,
     outputCantMake=-8,
-    uidError=-9,
-    pthreadCreateFailed=-10
+    errorCantFound=-9,
+    uidError=-10,
+    pthreadCreateFailed=-11
 };
 //各种限制与路径
 struct limits{
     rlim_t cpuTimeLimit;
     rlim_t memoryLimit;
     rlim_t realTimeLimit;
+    rlim_t outputLimit;
     char * inputPath;
     char * outputPath;
     char * execPath;
     char * stdOutputPath;
-    char * complieErrorPath;
     char * loggerPath;
+    char * errorPath;
+    char * type;
     FILE * loggerFile;
     uid_t uid;
     int guard;
-    int py;
     int jar;
 };
 //判题结果
@@ -52,6 +54,7 @@ struct judgeResult{
 enum analyse{
     WRONG_ANSWER=-1,
     SUCCESS=0,
+    LOAD_SECCOMP_FAILED=1,
     TIME_LIMIT_EXCEEDED=2,
     MEMORY_LIMIT_EXCEEDED=3,
     RUNTIME_ERROR=4,
@@ -67,6 +70,7 @@ enum limitsDefault{
     memoryLimit=1024*1024*64, //64MB
     wallMemoryLimit=1024*1024*1024, //1024MB 硬限制
     realTimeLimit=4000, //4000ms真实时间
-    uidDefeat=2333
+    uidDefeat=2333,
+    outputLimit=20000000
 };
 #endif

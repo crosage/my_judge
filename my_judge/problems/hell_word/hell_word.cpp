@@ -6,6 +6,10 @@ int main()
 {
     int x;
     cin>>x;
-    fork();
+    while(1)
+    {
+        printf("hello world\n");
+    }
+//    fork();
     printf("hello world\n");   
 }

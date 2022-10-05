@@ -7,7 +7,6 @@ map<string,string> m={
     {".cc","g++ -o "},
     {".cpp","g++ -o "},
     {".c","gcc -o "},
-    {".py","python3 -m "},
     {".java","javac "}
 };
 #endif

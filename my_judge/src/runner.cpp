@@ -9,6 +9,7 @@
 #include "./commons.h"
 #include "./runner.h"
 #include "./logger.h"
+#include "./seccomp_rules.h"
 void close_file(FILE *fp) {
     if (fp != NULL) {
         fclose(fp);
@@ -16,16 +17,28 @@ void close_file(FILE *fp) {
 }
 void setLimit(struct limits *limit)//设置时间限制和内存限制
 {
-    struct rlimit memory_limit;
-    memory_limit.rlim_cur=memory_limit.rlim_max=limit->memoryLimit*2;
-    if(setrlimit(RLIMIT_AS,&memory_limit))
+    //java虚拟机需要单独处理
+    if(strcmp(limit->type,"java"))
     {
-        makeLog(ERROR,"限制出错",limit->loggerFile);    
-        exit(memorySetError);   
+        //printf("我不是java limit->type=%s\n",limit->type);
+        struct rlimit memory_limit;
+        memory_limit.rlim_cur=memory_limit.rlim_max=limit->memoryLimit*2;
+        if(setrlimit(RLIMIT_AS,&memory_limit))
+        {
+            makeLog(ERROR,"限制出错",limit->loggerFile);    
+            exit(memorySetError);   
+        }
     }
     struct rlimit time_limit;
     time_limit.rlim_cur=time_limit.rlim_max=(limit->cpuTimeLimit+1000)/1000;
     if(setrlimit(RLIMIT_CPU,&time_limit))
+    {
+        makeLog(ERROR,"限制出错",limit->loggerFile);    
+        exit(timeSetError);
+    }
+    struct rlimit maxOutput;
+    maxOutput.rlim_cur=maxOutput.rlim_max=limit->outputLimit;
+    if(setrlimit(RLIMIT_FSIZE,&maxOutput))
     {
         makeLog(ERROR,"限制出错",limit->loggerFile);    
         exit(timeSetError);
@@ -36,6 +49,7 @@ void run(struct limits *limit)
 //    printf("***************\n");
     FILE * input=NULL;
     FILE * output=NULL;
+    FILE * errFile=NULL;
 //    printf("limi =%s\n",limit->inputPath);
     if(limit->inputPath[0]!='\0')
     {
@@ -51,6 +65,7 @@ void run(struct limits *limit)
         dup2(f,STDIN_FILENO);
     }
 //    printf("****\n");
+
     if(limit->outputPath[0]!='\0')
     {
         output=fopen(limit->outputPath,"w");
@@ -62,7 +77,20 @@ void run(struct limits *limit)
         //将键盘输出重定向至该文件
         int f=fileno(output);
         dup2(f,STDOUT_FILENO);
+//        dup2(f,STDERR_FILENO);
     }
+    if(limit->errorPath[0]!='\0')
+    {
+        errFile=fopen(limit->errorPath,"w");
+        if(!errFile)
+        {
+            makeLog(ERROR,"无法打开错误文件",limit->loggerFile);
+            exit(errorCantFound);
+        }
+        int f=fileno(errFile);
+        dup2(f,STDERR_FILENO);
+    }
+    
 //    printf("***************\n");
     if(limit->uid>0)
     {
@@ -74,23 +102,49 @@ void run(struct limits *limit)
         }
     }
 //    printf("haha\n");
-    setLimit(limit);
-    setSeccompGuard();
-    if(limit->py==0)
+    
+    
+//    printf("%s\n",limit->type);
+    if(!strcmp(limit->type,"\0")||!strcmp(limit->type,"c")||!strcmp(limit->type,"c++")||!strcmp(limit->type,"cpp"))
     {
+        setLimit(limit);
+//        printf("c = 1=%d 2=%d 3=%d 4=%d\n",strcmp(limit->type,"\0"),strcmp(limit->type,"c"),strcmp(limit->type,"c++"),strcmp(limit->type,"cpp"));
+        c_cpp_seccomp_rules(limit);
         char *envp[]={"PATH=/bin",0};
 //    printf("运行了 %s\n",limit->execPath);
-        execve(limit->execPath,NULL,envp);
+        if(execve(limit->execPath,NULL,envp))
+            makeLog(FATAL,"执行出错",limit->loggerFile);
     }
-    else if(limit->py==1)
+    else if(!strcmp(limit->type,"python")||!strcmp(limit->type,"py"))
     {
-//        printf("hahaha\n");
+        setLimit(limit);
+        setSeccompGuard();
+        printf("hahaha\n");
         string tmp=limit->execPath;
-        string tmptmp=tmp.substr(tmp.rfind("/")+1);
-        char *argv[]={"python","hell_word.py",NULL};
+//        string tmptmp=tmp.substr(tmp.rfind("/")+1);
+        char *argv[]={"python3",(char*)(tmp.c_str())};
         char *envp[]={"PATH=/bin",0};
 //        cout<<tmptmp<<endl;
 //        system("ls");
-        execve(limit->execPath,argv,envp);
+        if(execve("/usr/bin/python3",argv,envp))
+            makeLog(FATAL,"执行出错",limit->loggerFile);
+//            printf("*asd8*as8*asd8*asd\n");
+    }
+    else if(!strcmp(limit->type,"java"))
+    {
+        setLimit(limit);
+        setSeccompGuard();
+        string tmp=limit->execPath;
+        string tmp1=tmp.substr(0,tmp.rfind("/")+1);
+        string tmp2=tmp.substr(tmp.rfind("/")+1);
+        char *argv[]={"java","-cp","./problems/hell_word/","HelloWorld"};
+//        char *envp[]={"PATH=/bin",0};
+//        cout<<tmp1.c_str()<<" "<<tmp2.c_str()<<endl;
+        if(execve("/usr/bin/java",argv,NULL))
+            makeLog(FATAL,"执行出错",limit->loggerFile);
+    }
+    else
+    {
+        makeLog(FATAL,"不支持的文件类型",limit->loggerFile);
     }
 }

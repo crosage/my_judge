@@ -13,7 +13,7 @@ void showUsage()
 {
     printf("\n[参数]\n");
     printf("\
-    -c   测试点个数\n");
+    -n   路径\n");
     printf("\
     -h    查看帮助\n");
 }
@@ -67,7 +67,7 @@ int main(int argc,char *argv[])
 //        gcc -o path path.c &>
 //        cout<<m[suffixName]<<endl;
         string tmp="";
-        if(suffixName==".java"||suffixName==".py")
+        if(suffixName==".java")
             tmp=m[suffixName]+constantPath+" &>"+errorPath;
         else 
             tmp=m[suffixName]+constantPath.substr(0,constantPath.rfind('.'))+" "+constantPath+" &>"+errorPath;

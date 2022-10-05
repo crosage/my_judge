@@ -4,13 +4,15 @@ void init(struct limits *limit,struct judgeResult *result)
     limit->cpuTimeLimit=cpuTimeLimit;
     limit->realTimeLimit=realTimeLimit;
     limit->memoryLimit=memoryLimit;
+    limit->outputLimit=outputLimit;
     limit->outputPath="\0";
     limit->inputPath="\0";
     limit->stdOutputPath="\0";
+    limit->errorPath="\0";
     limit->execPath="\0";
+    limit->type="\0";
     limit->loggerPath="./main.log";
     limit->uid=uidDefeat;
-    limit->py=0;
     limit->jar=0;
     result->condition=1000;
     result->memoryCost=0;
@@ -21,10 +23,11 @@ void init(struct limits *limit,struct judgeResult *result)
 void showUsage() {
     printf("\n[限制相关]\n");
     printf("\
-  -t,     [可选] 限制实际时间，单位 ms，请注意和 CPU 时间区分，默认值为 4000\n\
-  -c,     [可选] 限制 CPU 时间，单位 ms，默认值为 4000\n\
-  -m,     [可选] 限制运行内存，单位 MB，默认值为 64MB\n\
-  -u,     [可选] 执行目标可执行文件对应的用户 ID，默认值为 3000\n");
+  -t,      限制实际时间，单位 ms，请注意和 CPU 时间区分，默认值为 4000\n\
+  -c,      限制 CPU 时间，单位 ms，默认值为 4000\n\
+  -m,      限制运行内存，单位 MB，默认值为 64MB\n\
+  -u,      执行目标可执行文件对应的用户 ID，默认值为 2333\n\
+  -f,      限制代码最大输出，单位 B，默认值为 20000000\n");
     printf("[输入/输出相关]\n");
 
     printf("\
@@ -43,7 +46,7 @@ void showUsage() {
 int setOptions(int argc,char *argv[],struct limits *limit)
 {
     int opt;
-    while ((opt = getopt(argc, argv, "t:c:m:f:o:e:i:r:l:h::u:g:p:y")) != -1) 
+    while ((opt = getopt(argc, argv, "t:c:m:f:o:e:i:r:l:h::u:g:p:y:")) != -1) 
     {
         switch (opt) 
         {
@@ -60,7 +63,7 @@ int setOptions(int argc,char *argv[],struct limits *limit)
                 limit->stdOutputPath = optarg;
                 break;
             case 'e':
-                limit->complieErrorPath = optarg;
+                limit->errorPath = optarg;
                 break;
             case 'i':
                 limit->inputPath = optarg;
@@ -78,7 +81,7 @@ int setOptions(int argc,char *argv[],struct limits *limit)
                 limit->uid = atoi(optarg);
                 break;
             case 'y':
-                limit->py=1;
+                limit->type=optarg;
                 break;
             case 'j':
                 limit->jar=1;

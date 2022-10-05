@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/krosa/my_judge/src/c_cpp.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/c_cpp.cpp.o"
+  "/home/krosa/my_judge/src/c_cpp_fileio.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.o"
   "/home/krosa/my_judge/src/commons.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/commons.cpp.o"
   "/home/krosa/my_judge/src/compareIgnoreSpaces.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.o"
   "/home/krosa/my_judge/src/guard.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/guard.cpp.o"

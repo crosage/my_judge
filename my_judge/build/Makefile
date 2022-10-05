@@ -123,6 +123,60 @@ myjudge/fast:
 	$(MAKE) -f CMakeFiles/myjudge.dir/build.make CMakeFiles/myjudge.dir/build
 .PHONY : myjudge/fast
 
+src/c_cpp.o: src/c_cpp.cpp.o
+
+.PHONY : src/c_cpp.o
+
+# target to build an object file
+src/c_cpp.cpp.o:
+	$(MAKE) -f CMakeFiles/myjudge.dir/build.make CMakeFiles/myjudge.dir/src/c_cpp.cpp.o
+.PHONY : src/c_cpp.cpp.o
+
+src/c_cpp.i: src/c_cpp.cpp.i
+
+.PHONY : src/c_cpp.i
+
+# target to preprocess a source file
+src/c_cpp.cpp.i:
+	$(MAKE) -f CMakeFiles/myjudge.dir/build.make CMakeFiles/myjudge.dir/src/c_cpp.cpp.i
+.PHONY : src/c_cpp.cpp.i
+
+src/c_cpp.s: src/c_cpp.cpp.s
+
+.PHONY : src/c_cpp.s
+
+# target to generate assembly for a file
+src/c_cpp.cpp.s:
+	$(MAKE) -f CMakeFiles/myjudge.dir/build.make CMakeFiles/myjudge.dir/src/c_cpp.cpp.s
+.PHONY : src/c_cpp.cpp.s
+
+src/c_cpp_fileio.o: src/c_cpp_fileio.cpp.o
+
+.PHONY : src/c_cpp_fileio.o
+
+# target to build an object file
+src/c_cpp_fileio.cpp.o:
+	$(MAKE) -f CMakeFiles/myjudge.dir/build.make CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.o
+.PHONY : src/c_cpp_fileio.cpp.o
+
+src/c_cpp_fileio.i: src/c_cpp_fileio.cpp.i
+
+.PHONY : src/c_cpp_fileio.i
+
+# target to preprocess a source file
+src/c_cpp_fileio.cpp.i:
+	$(MAKE) -f CMakeFiles/myjudge.dir/build.make CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.i
+.PHONY : src/c_cpp_fileio.cpp.i
+
+src/c_cpp_fileio.s: src/c_cpp_fileio.cpp.s
+
+.PHONY : src/c_cpp_fileio.s
+
+# target to generate assembly for a file
+src/c_cpp_fileio.cpp.s:
+	$(MAKE) -f CMakeFiles/myjudge.dir/build.make CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.s
+.PHONY : src/c_cpp_fileio.cpp.s
+
 src/commons.o: src/commons.cpp.o
 
 .PHONY : src/commons.o
@@ -321,6 +375,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... myjudge"
+	@echo "... src/c_cpp.o"
+	@echo "... src/c_cpp.i"
+	@echo "... src/c_cpp.s"
+	@echo "... src/c_cpp_fileio.o"
+	@echo "... src/c_cpp_fileio.i"
+	@echo "... src/c_cpp_fileio.s"
 	@echo "... src/commons.o"
 	@echo "... src/commons.i"
 	@echo "... src/commons.s"

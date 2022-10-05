@@ -118,7 +118,11 @@ void judge(struct limits *limit,struct judgeResult *result)
                     compareIgnoreSpaces(limit,result);
                 }
             }
-            else result->condition=SYSTEM_ERROR;
+            else 
+            {
+                //printf("%d   **********\n",WEXITSTATUS(status));
+                result->condition=SYSTEM_ERROR;
+            }
         }
         else
         {

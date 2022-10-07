@@ -18,7 +18,7 @@ chmod 777 ./build.sh
 - o:标程输出文件路径
 - i:标程输入文件路径
 - p:选手输出文件路径
-- y:是否为python类型文件
+- y:是什么类型的文件 python java c等
 - h:帮助
 
 ## myjudge的返回结果示例

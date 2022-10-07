@@ -43,6 +43,7 @@ chmod 777 ./build.sh
 ## myjudge result码
 - -1:答案错误
 - 0:答案正确
+- 1:设置沙盒出错
 - 2:时间超限
 - 3:内存超限
 - 4:运行时错误
@@ -54,6 +55,23 @@ chmod 777 ./build.sh
 - 10:非root用户
 ## 示例
 
+- 选手为python类型文件
+
 ``` sh
-sudo ./build/myjudge -t 3000 -c 3000 -p ./problems/hell_word/1.myout -r ./problems/hell_word/hell_word.py -i ./problems/hell_word/1.in -o ./problems/hell_word/1.out -l ./logger.txt -y
+sudo ./build/myjudge -t 3000 -c 3000 -p ./problems/hell_word/1.myout -r ./problems/hell_word/hell_word.py -i ./problems/hell_word/1.in -o ./problems/hell_word/1.out -l ./logger.txt -y python
+```
+- 选手为java类型文件
+    
+    -r参数可加class或不加class
+```sh
+sudo ./build/myjudge -t 3000 -c 3000 -p ./problems/hell_word/1.myut -r ./problems/hell_word/hell_word -i ./problems/hell_word/1.in -o ./problems/hell_word/1.out -l ./logger.txt -y java
+```
+```sh
+sudo ./build/myjudge -t 3000 -c 3000 -p ./problems/hell_word/1.myut -r ./problems/hell_word/hell_word.class -i ./problems/hell_word/1.in -o ./problems/hell_word/1.out -l ./logger.txt -y java
+```
+- 选手为c/cpp类型文件
+
+    执行二进制文件
+```
+sudo ./build/myjudge -t 3000 -c 3000 -p ./problems/hell_word/1.myut -r ./problems/hell_word/hell_word -i ./problems/hell_word/1.in -o ./problems/hell_word/1.out -l ./logger.txt 
 ```

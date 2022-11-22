@@ -7,7 +7,8 @@
 #include<signal.h>
 #include<pthread.h>
 #include<iostream>
-#include<sys/wait.h>
+#include "pthread.h"
+#include "sys/wait.h"
 #include "dealComplie.h"
 void showUsage()
 {
@@ -70,12 +71,8 @@ int main(int argc,char *argv[])
         if(suffixName==".java")
             tmp=m[suffixName]+constantPath+" &>"+errorPath;
         else 
-            tmp=m[suffixName]+constantPath.substr(0,constantPath.rfind('.'))+" "+constantPath+" &>"+errorPath;
-        cout<<tmp<<endl;
+            tmp=m[suffixName]+constantPath.substr(0,constantPath.rfind('.'))+" "+constantPath+" 2>"+errorPath;
+        // cout<<tmp<<endl;
         system(tmp.c_str());
-//        char *envp[]={"PATH=/bin",0};
-//    printf("运行了 %s\n",limit->execPath);
-//        char *tt="./problems/hell_word/HelloWorld.class";
-//        execve(tt,NULL,envp);
     }
 }

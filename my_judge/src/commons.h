@@ -22,6 +22,7 @@ enum RUNNING_CONDITION{
     inputNotFound=-7,
     outputCantMake=-8,
     errorCantFound=-9,
+    execPathCantFound=-12,
     uidError=-10,
     pthreadCreateFailed=-11
 };
@@ -48,6 +49,9 @@ struct judgeResult{
     rlim_t cpuTimeCost;
     rlim_t realTimeCost;
     rlim_t memoryCost;
+    string errorOut;
+    string stdOut;
+    int lineNumber;
     int condition;
     int exitCode;
 };

@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/krosa/my_judge/src/c_cpp.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/c_cpp.cpp.o"
-  "/home/krosa/my_judge/src/c_cpp_fileio.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.o"
-  "/home/krosa/my_judge/src/commons.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/commons.cpp.o"
-  "/home/krosa/my_judge/src/compareIgnoreSpaces.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.o"
-  "/home/krosa/my_judge/src/guard.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/guard.cpp.o"
-  "/home/krosa/my_judge/src/judger.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/judger.cpp.o"
-  "/home/krosa/my_judge/src/logger.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/logger.cpp.o"
-  "/home/krosa/my_judge/src/main.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/main.cpp.o"
-  "/home/krosa/my_judge/src/runner.cpp" "/home/krosa/my_judge/build/CMakeFiles/myjudge.dir/src/runner.cpp.o"
+  "/home/znsbc/my_judge/src/c_cpp.cpp" "/home/znsbc/my_judge/build/CMakeFiles/myjudge.dir/src/c_cpp.cpp.o"
+  "/home/znsbc/my_judge/src/c_cpp_fileio.cpp" "/home/znsbc/my_judge/build/CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.o"
+  "/home/znsbc/my_judge/src/commons.cpp" "/home/znsbc/my_judge/build/CMakeFiles/myjudge.dir/src/commons.cpp.o"
+  "/home/znsbc/my_judge/src/compareIgnoreSpaces.cpp" "/home/znsbc/my_judge/build/CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.o"
+  "/home/znsbc/my_judge/src/guard.cpp" "/home/znsbc/my_judge/build/CMakeFiles/myjudge.dir/src/guard.cpp.o"
+  "/home/znsbc/my_judge/src/judger.cpp" "/home/znsbc/my_judge/build/CMakeFiles/myjudge.dir/src/judger.cpp.o"
+  "/home/znsbc/my_judge/src/logger.cpp" "/home/znsbc/my_judge/build/CMakeFiles/myjudge.dir/src/logger.cpp.o"
+  "/home/znsbc/my_judge/src/main.cpp" "/home/znsbc/my_judge/build/CMakeFiles/myjudge.dir/src/main.cpp.o"
+  "/home/znsbc/my_judge/src/runner.cpp" "/home/znsbc/my_judge/build/CMakeFiles/myjudge.dir/src/runner.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

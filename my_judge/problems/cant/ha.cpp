@@ -1,4 +1,4 @@
-#include<iostream>
+#include "/dev/random"
 int main()
-
+{
 }

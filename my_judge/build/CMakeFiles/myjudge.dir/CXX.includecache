@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/krosa/my_judge/src/c_cpp.cpp
+/home/znsbc/my_judge/src/c_cpp.cpp
 stdio.h
 -
 seccomp.h
@@ -20,19 +20,19 @@ fcntl.h
 stdbool.h
 -
 commons.h
-/home/krosa/my_judge/src/commons.h
+/home/znsbc/my_judge/src/commons.h
 
-/home/krosa/my_judge/src/c_cpp_fileio.cpp
+/home/znsbc/my_judge/src/c_cpp_fileio.cpp
 stdbool.h
 -
 seccomp_rules.h
-/home/krosa/my_judge/src/seccomp_rules.h
+/home/znsbc/my_judge/src/seccomp_rules.h
 
-/home/krosa/my_judge/src/commons.cpp
+/home/znsbc/my_judge/src/commons.cpp
 commons.h
-/home/krosa/my_judge/src/commons.h
+/home/znsbc/my_judge/src/commons.h
 
-/home/krosa/my_judge/src/commons.h
+/home/znsbc/my_judge/src/commons.h
 unistd.h
 -
 sys/resource.h
@@ -40,7 +40,7 @@ sys/resource.h
 string
 -
 
-/home/krosa/my_judge/src/compareIgnoreSpaces.cpp
+/home/znsbc/my_judge/src/compareIgnoreSpaces.cpp
 cstdio
 -
 cstdlib
@@ -48,19 +48,19 @@ cstdlib
 string.h
 -
 commons.h
-/home/krosa/my_judge/src/commons.h
+/home/znsbc/my_judge/src/commons.h
 ctime
 -
 
-/home/krosa/my_judge/src/compareIgnoreSpaces.h
+/home/znsbc/my_judge/src/compareIgnoreSpaces.h
 commons.h
-/home/krosa/my_judge/src/commons.h
+/home/znsbc/my_judge/src/commons.h
 
-/home/krosa/my_judge/src/guard.cpp
+/home/znsbc/my_judge/src/guard.cpp
 guard.h
-/home/krosa/my_judge/src/guard.h
+/home/znsbc/my_judge/src/guard.h
 commons.h
-/home/krosa/my_judge/src/commons.h
+/home/znsbc/my_judge/src/commons.h
 stdlib.h
 -
 unistd.h
@@ -68,11 +68,11 @@ unistd.h
 cstdio
 -
 
-/home/krosa/my_judge/src/guard.h
+/home/znsbc/my_judge/src/guard.h
 seccomp.h
 -
 
-/home/krosa/my_judge/src/judger.cpp
+/home/znsbc/my_judge/src/judger.cpp
 cstdio
 -
 sys/time.h
@@ -90,33 +90,37 @@ cstring
 string
 -
 compareIgnoreSpaces.h
-/home/krosa/my_judge/src/compareIgnoreSpaces.h
+/home/znsbc/my_judge/src/compareIgnoreSpaces.h
 ./commons.h
-/home/krosa/my_judge/src/commons.h
+/home/znsbc/my_judge/src/commons.h
 ./runner.h
-/home/krosa/my_judge/src/runner.h
+/home/znsbc/my_judge/src/runner.h
 ./logger.h
-/home/krosa/my_judge/src/logger.h
+/home/znsbc/my_judge/src/logger.h
 
-/home/krosa/my_judge/src/judger.h
+/home/znsbc/my_judge/src/judger.h
 
-/home/krosa/my_judge/src/logger.cpp
+/home/znsbc/my_judge/src/logger.cpp
 time.h
 -
 stdio.h
 -
 logger.h
-/home/krosa/my_judge/src/logger.h
+/home/znsbc/my_judge/src/logger.h
 
-/home/krosa/my_judge/src/logger.h
+/home/znsbc/my_judge/src/logger.h
 
-/home/krosa/my_judge/src/main.cpp
+/home/znsbc/my_judge/src/main.cpp
 ./commons.h
-/home/krosa/my_judge/src/commons.h
+/home/znsbc/my_judge/src/commons.h
 ./judger.h
-/home/krosa/my_judge/src/judger.h
+/home/znsbc/my_judge/src/judger.h
+fstream
+-
+iostream
+-
 
-/home/krosa/my_judge/src/runner.cpp
+/home/znsbc/my_judge/src/runner.cpp
 cstdio
 -
 cstdlib
@@ -132,21 +136,21 @@ iostream
 cstring
 -
 ./guard.h
-/home/krosa/my_judge/src/guard.h
+/home/znsbc/my_judge/src/guard.h
 ./commons.h
-/home/krosa/my_judge/src/commons.h
+/home/znsbc/my_judge/src/commons.h
 ./runner.h
-/home/krosa/my_judge/src/runner.h
+/home/znsbc/my_judge/src/runner.h
 ./logger.h
-/home/krosa/my_judge/src/logger.h
+/home/znsbc/my_judge/src/logger.h
 ./seccomp_rules.h
-/home/krosa/my_judge/src/seccomp_rules.h
+/home/znsbc/my_judge/src/seccomp_rules.h
 
-/home/krosa/my_judge/src/runner.h
+/home/znsbc/my_judge/src/runner.h
 guard.h
-/home/krosa/my_judge/src/guard.h
+/home/znsbc/my_judge/src/guard.h
 
-/home/krosa/my_judge/src/seccomp_rules.h
+/home/znsbc/my_judge/src/seccomp_rules.h
 stdbool.h
 -
 

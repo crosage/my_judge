@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/krosa/my_judge
+CMAKE_SOURCE_DIR = /home/znsbc/my_judge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/krosa/my_judge/build
+CMAKE_BINARY_DIR = /home/znsbc/my_judge/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/myjudge.dir/depend.make
@@ -59,120 +59,120 @@ include CMakeFiles/myjudge.dir/flags.make
 
 CMakeFiles/myjudge.dir/src/c_cpp.cpp.o: CMakeFiles/myjudge.dir/flags.make
 CMakeFiles/myjudge.dir/src/c_cpp.cpp.o: ../src/c_cpp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krosa/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/myjudge.dir/src/c_cpp.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/c_cpp.cpp.o -c /home/krosa/my_judge/src/c_cpp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znsbc/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/myjudge.dir/src/c_cpp.cpp.o"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/c_cpp.cpp.o -c /home/znsbc/my_judge/src/c_cpp.cpp
 
 CMakeFiles/myjudge.dir/src/c_cpp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myjudge.dir/src/c_cpp.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krosa/my_judge/src/c_cpp.cpp > CMakeFiles/myjudge.dir/src/c_cpp.cpp.i
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znsbc/my_judge/src/c_cpp.cpp > CMakeFiles/myjudge.dir/src/c_cpp.cpp.i
 
 CMakeFiles/myjudge.dir/src/c_cpp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myjudge.dir/src/c_cpp.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krosa/my_judge/src/c_cpp.cpp -o CMakeFiles/myjudge.dir/src/c_cpp.cpp.s
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znsbc/my_judge/src/c_cpp.cpp -o CMakeFiles/myjudge.dir/src/c_cpp.cpp.s
 
 CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.o: CMakeFiles/myjudge.dir/flags.make
 CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.o: ../src/c_cpp_fileio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krosa/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.o -c /home/krosa/my_judge/src/c_cpp_fileio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znsbc/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.o"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.o -c /home/znsbc/my_judge/src/c_cpp_fileio.cpp
 
 CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krosa/my_judge/src/c_cpp_fileio.cpp > CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.i
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znsbc/my_judge/src/c_cpp_fileio.cpp > CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.i
 
 CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krosa/my_judge/src/c_cpp_fileio.cpp -o CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.s
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znsbc/my_judge/src/c_cpp_fileio.cpp -o CMakeFiles/myjudge.dir/src/c_cpp_fileio.cpp.s
 
 CMakeFiles/myjudge.dir/src/commons.cpp.o: CMakeFiles/myjudge.dir/flags.make
 CMakeFiles/myjudge.dir/src/commons.cpp.o: ../src/commons.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krosa/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/myjudge.dir/src/commons.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/commons.cpp.o -c /home/krosa/my_judge/src/commons.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znsbc/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/myjudge.dir/src/commons.cpp.o"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/commons.cpp.o -c /home/znsbc/my_judge/src/commons.cpp
 
 CMakeFiles/myjudge.dir/src/commons.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myjudge.dir/src/commons.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krosa/my_judge/src/commons.cpp > CMakeFiles/myjudge.dir/src/commons.cpp.i
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znsbc/my_judge/src/commons.cpp > CMakeFiles/myjudge.dir/src/commons.cpp.i
 
 CMakeFiles/myjudge.dir/src/commons.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myjudge.dir/src/commons.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krosa/my_judge/src/commons.cpp -o CMakeFiles/myjudge.dir/src/commons.cpp.s
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znsbc/my_judge/src/commons.cpp -o CMakeFiles/myjudge.dir/src/commons.cpp.s
 
 CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.o: CMakeFiles/myjudge.dir/flags.make
 CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.o: ../src/compareIgnoreSpaces.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krosa/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.o -c /home/krosa/my_judge/src/compareIgnoreSpaces.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znsbc/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.o"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.o -c /home/znsbc/my_judge/src/compareIgnoreSpaces.cpp
 
 CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krosa/my_judge/src/compareIgnoreSpaces.cpp > CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.i
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znsbc/my_judge/src/compareIgnoreSpaces.cpp > CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.i
 
 CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krosa/my_judge/src/compareIgnoreSpaces.cpp -o CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.s
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znsbc/my_judge/src/compareIgnoreSpaces.cpp -o CMakeFiles/myjudge.dir/src/compareIgnoreSpaces.cpp.s
 
 CMakeFiles/myjudge.dir/src/guard.cpp.o: CMakeFiles/myjudge.dir/flags.make
 CMakeFiles/myjudge.dir/src/guard.cpp.o: ../src/guard.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krosa/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/myjudge.dir/src/guard.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/guard.cpp.o -c /home/krosa/my_judge/src/guard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znsbc/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/myjudge.dir/src/guard.cpp.o"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/guard.cpp.o -c /home/znsbc/my_judge/src/guard.cpp
 
 CMakeFiles/myjudge.dir/src/guard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myjudge.dir/src/guard.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krosa/my_judge/src/guard.cpp > CMakeFiles/myjudge.dir/src/guard.cpp.i
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znsbc/my_judge/src/guard.cpp > CMakeFiles/myjudge.dir/src/guard.cpp.i
 
 CMakeFiles/myjudge.dir/src/guard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myjudge.dir/src/guard.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krosa/my_judge/src/guard.cpp -o CMakeFiles/myjudge.dir/src/guard.cpp.s
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znsbc/my_judge/src/guard.cpp -o CMakeFiles/myjudge.dir/src/guard.cpp.s
 
 CMakeFiles/myjudge.dir/src/judger.cpp.o: CMakeFiles/myjudge.dir/flags.make
 CMakeFiles/myjudge.dir/src/judger.cpp.o: ../src/judger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krosa/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/myjudge.dir/src/judger.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/judger.cpp.o -c /home/krosa/my_judge/src/judger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znsbc/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/myjudge.dir/src/judger.cpp.o"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/judger.cpp.o -c /home/znsbc/my_judge/src/judger.cpp
 
 CMakeFiles/myjudge.dir/src/judger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myjudge.dir/src/judger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krosa/my_judge/src/judger.cpp > CMakeFiles/myjudge.dir/src/judger.cpp.i
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znsbc/my_judge/src/judger.cpp > CMakeFiles/myjudge.dir/src/judger.cpp.i
 
 CMakeFiles/myjudge.dir/src/judger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myjudge.dir/src/judger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krosa/my_judge/src/judger.cpp -o CMakeFiles/myjudge.dir/src/judger.cpp.s
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znsbc/my_judge/src/judger.cpp -o CMakeFiles/myjudge.dir/src/judger.cpp.s
 
 CMakeFiles/myjudge.dir/src/logger.cpp.o: CMakeFiles/myjudge.dir/flags.make
 CMakeFiles/myjudge.dir/src/logger.cpp.o: ../src/logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krosa/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/myjudge.dir/src/logger.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/logger.cpp.o -c /home/krosa/my_judge/src/logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znsbc/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/myjudge.dir/src/logger.cpp.o"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/logger.cpp.o -c /home/znsbc/my_judge/src/logger.cpp
 
 CMakeFiles/myjudge.dir/src/logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myjudge.dir/src/logger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krosa/my_judge/src/logger.cpp > CMakeFiles/myjudge.dir/src/logger.cpp.i
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znsbc/my_judge/src/logger.cpp > CMakeFiles/myjudge.dir/src/logger.cpp.i
 
 CMakeFiles/myjudge.dir/src/logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myjudge.dir/src/logger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krosa/my_judge/src/logger.cpp -o CMakeFiles/myjudge.dir/src/logger.cpp.s
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znsbc/my_judge/src/logger.cpp -o CMakeFiles/myjudge.dir/src/logger.cpp.s
 
 CMakeFiles/myjudge.dir/src/main.cpp.o: CMakeFiles/myjudge.dir/flags.make
 CMakeFiles/myjudge.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krosa/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/myjudge.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/main.cpp.o -c /home/krosa/my_judge/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znsbc/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/myjudge.dir/src/main.cpp.o"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/main.cpp.o -c /home/znsbc/my_judge/src/main.cpp
 
 CMakeFiles/myjudge.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myjudge.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krosa/my_judge/src/main.cpp > CMakeFiles/myjudge.dir/src/main.cpp.i
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znsbc/my_judge/src/main.cpp > CMakeFiles/myjudge.dir/src/main.cpp.i
 
 CMakeFiles/myjudge.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myjudge.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krosa/my_judge/src/main.cpp -o CMakeFiles/myjudge.dir/src/main.cpp.s
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znsbc/my_judge/src/main.cpp -o CMakeFiles/myjudge.dir/src/main.cpp.s
 
 CMakeFiles/myjudge.dir/src/runner.cpp.o: CMakeFiles/myjudge.dir/flags.make
 CMakeFiles/myjudge.dir/src/runner.cpp.o: ../src/runner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krosa/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/myjudge.dir/src/runner.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/runner.cpp.o -c /home/krosa/my_judge/src/runner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znsbc/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/myjudge.dir/src/runner.cpp.o"
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myjudge.dir/src/runner.cpp.o -c /home/znsbc/my_judge/src/runner.cpp
 
 CMakeFiles/myjudge.dir/src/runner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myjudge.dir/src/runner.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krosa/my_judge/src/runner.cpp > CMakeFiles/myjudge.dir/src/runner.cpp.i
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znsbc/my_judge/src/runner.cpp > CMakeFiles/myjudge.dir/src/runner.cpp.i
 
 CMakeFiles/myjudge.dir/src/runner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myjudge.dir/src/runner.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krosa/my_judge/src/runner.cpp -o CMakeFiles/myjudge.dir/src/runner.cpp.s
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znsbc/my_judge/src/runner.cpp -o CMakeFiles/myjudge.dir/src/runner.cpp.s
 
 # Object files for target myjudge
 myjudge_OBJECTS = \
@@ -200,7 +200,7 @@ myjudge: CMakeFiles/myjudge.dir/src/main.cpp.o
 myjudge: CMakeFiles/myjudge.dir/src/runner.cpp.o
 myjudge: CMakeFiles/myjudge.dir/build.make
 myjudge: CMakeFiles/myjudge.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/krosa/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable myjudge"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/znsbc/my_judge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable myjudge"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myjudge.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -213,6 +213,6 @@ CMakeFiles/myjudge.dir/clean:
 .PHONY : CMakeFiles/myjudge.dir/clean
 
 CMakeFiles/myjudge.dir/depend:
-	cd /home/krosa/my_judge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/krosa/my_judge /home/krosa/my_judge /home/krosa/my_judge/build /home/krosa/my_judge/build /home/krosa/my_judge/build/CMakeFiles/myjudge.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/znsbc/my_judge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/znsbc/my_judge /home/znsbc/my_judge /home/znsbc/my_judge/build /home/znsbc/my_judge/build /home/znsbc/my_judge/build/CMakeFiles/myjudge.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/myjudge.dir/depend
 

@@ -51,6 +51,11 @@ void run(struct limits *limit)
     FILE * output=NULL;
     FILE * errFile=NULL;
 //    printf("limi =%s\n",limit->inputPath);
+    if(!fopen(limit->execPath,"r"))
+    {
+        // printf("?????");
+        exit(execPathCantFound);
+    }
     if(limit->inputPath[0]!='\0')
     {
         input=fopen(limit->inputPath,"r");
@@ -90,6 +95,7 @@ void run(struct limits *limit)
         int f=fileno(errFile);
         dup2(f,STDERR_FILENO);
     }
+
     
 //    printf("***************\n");
     if(limit->uid>0)
@@ -119,7 +125,7 @@ void run(struct limits *limit)
     {
         setLimit(limit);
         setSeccompGuard();
-        printf("hahaha\n");
+        // printf("hahaha\n");
         string tmp=limit->execPath;
 //        string tmptmp=tmp.substr(tmp.rfind("/")+1);
         char *argv[]={"python3",(char*)(tmp.c_str())};

@@ -14,6 +14,9 @@ void init(struct limits *limit,struct judgeResult *result)
     limit->loggerPath="./main.log";
     limit->uid=uidDefeat;
     limit->jar=0;
+    result->lineNumber=0;
+    result->errorOut="\0";
+    result->stdOut="\0";
     result->condition=1000;
     result->memoryCost=0;
     result->cpuTimeCost=0;

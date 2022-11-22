@@ -1,5 +1,8 @@
 #include "./commons.h"
 #include "./judger.h"
+#include<fstream>
+#include<iostream>
+char outString[450],inString[6000000];
 int main(int argc,char *argv[])
 {
     struct limits limit;
@@ -19,6 +22,7 @@ sudo ./build/myjudge -t 3000 -c 3000 '
 -i ./problems/hell_word/1.in -o 
 ./problems/realtest/mayan1.ans >>result'
 */
+
     if(setOptions(argc,argv,&limit))
     {
         limit.loggerFile=fopen(limit.loggerPath,"a");
@@ -29,12 +33,19 @@ sudo ./build/myjudge -t 3000 -c 3000 '
             "    \"memory\": %ld,\n"
             "    \"exit_code\": %d,\n"
             "    \"result\": %d\n"
+            "    \"lineNumber\": %d\n"
+            "    \"stdOut\": %s\n"
+            "    \"errorOut\": %s\n"
             "}",
             result.cpuTimeCost,
             result.realTimeCost,
             result.memoryCost,
             result.exitCode,
-            result.condition);
+            result.condition,
+            result.lineNumber,
+            result.stdOut.c_str(),
+            result.errorOut.c_str()
+            );
         printf("\n");
     }
 }

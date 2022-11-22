@@ -17,7 +17,7 @@ void showUsage()
     -c   测试点个数\n");
     printf("\
     -h    查看帮助\n");
-}
+}haha
 struct iwanna{
     pid_t pid;
 };

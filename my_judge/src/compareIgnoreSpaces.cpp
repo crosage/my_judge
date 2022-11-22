@@ -94,13 +94,7 @@ void compareIgnoreSpaces(struct limits *limit,struct judgeResult *result)
         }
         else flag2=0;
 //        printf("why?\n");
-        if(flag1!=flag2)
-        {
-            result->condition=WRONG_ANSWER;
-            fclose(stdputFile);
-            fclose(outputFile);
-            return ;
-        }
+
         int len1=0;
         while(len1<20)
         {
@@ -123,6 +117,13 @@ void compareIgnoreSpaces(struct limits *limit,struct judgeResult *result)
         str2[len2]='\0';
         result->errorOut=str1;
         result->stdOut=str2;
+        if(flag1!=flag2)
+        {
+            result->condition=WRONG_ANSWER;
+            fclose(stdputFile);
+            fclose(outputFile);
+            return ;
+        }
         if(len1!=len2||strcmp(str1,str2)!=0)
         {
             result->condition=WRONG_ANSWER;

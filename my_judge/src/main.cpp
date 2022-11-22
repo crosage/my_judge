@@ -32,10 +32,8 @@ sudo ./build/myjudge -t 3000 -c 3000 '
             "    \"real_time\": %d,\n"
             "    \"memory\": %ld,\n"
             "    \"exit_code\": %d,\n"
-            "    \"result\": %d\n"
-            "    \"lineNumber\": %d\n"
-            "    \"stdOut\": %s\n"
-            "    \"errorOut\": %s\n"
+            "    \"result\": %d,\n"
+            "    \"errorInfo\": \"wrong answer %d line differ - expected \'%s\' , found \'%s\'\"\n"
             "}",
             result.cpuTimeCost,
             result.realTimeCost,

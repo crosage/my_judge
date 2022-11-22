@@ -75,3 +75,10 @@ sudo ./build/myjudge -t 3000 -c 3000 -p ./problems/hell_word/1.myut -r ./problem
 ```
 sudo ./build/myjudge -t 3000 -c 3000 -p ./problems/hell_word/1.myut -r ./problems/hell_word/hell_word -i ./problems/hell_word/1.in -o ./problems/hell_word/1.out -l ./logger.txt 
 ```
+
+## 关于dealComplie
+例子
+```
+./dealComplie -n ./problems/hell_word/hello.cpp
+```
+同一文件夹下生成可执行文件

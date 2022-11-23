@@ -35,6 +35,7 @@ sudo ./build/myjudge -t 3000 -c 3000 '
         result_json["memory"]=result.memoryCost;
         result_json["exitCode"]=result.exitCode;
         string res="";
+        result_json["result"]=result.condition;
         res="wrong answer "+to_string(result.lineNumber)+" line differ -expected "+result.stdOut.c_str()+" found "+result.errorOut.c_str();
         result_json["errorInfo"]=res;
         cout<<result_json<<endl;

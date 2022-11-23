@@ -9,7 +9,9 @@
 #include<stdio.h>
 #include<iostream>
 #include<sys/wait.h>
-#include "dealComplie.h"
+// #include "dealComplie.h"
+
+{
 void showUsage()
 {
     printf("\n[参数]\n");
@@ -17,7 +19,7 @@ void showUsage()
     -c   测试点个数\n");
     printf("\
     -h    查看帮助\n");
-}haha
+}
 struct iwanna{
     pid_t pid;
 };
@@ -28,7 +30,7 @@ void *monitorThread(void *pidC)
     sleep(5);
     kill(pid,SIGKILL);
     return NULL;
-}
+}aaa
 
 string constantPath,suffixName,errorPath;
 int main(int argc,char *argv[])
@@ -65,5 +67,5 @@ int main(int argc,char *argv[])
         string tmp="sudo ./build/myjudge "+err+log+memory+Time+cpuTime+stdOutputPath+execPath+inputPath+outputPath+">>result";
         cout<<tmp<<" **getTest"<<endl;
         printf("%d\n",system(tmp.c_str()));
-    }
+    
 }

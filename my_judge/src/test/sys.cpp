@@ -1,13 +1,9 @@
-#include<map>
-#include<unistd.h>
-#include<sys/resource.h>
-#include<string>
-#include<cstring>
-#include<signal.h>
-#include<pthread.h>
-#include<iostream>
-using namespace std;
+#include<bits/stdc++.h>
+const int a=-1000;
 int main()
 {
-    system("g++ test3.cpp -o test3 -W | ls");
+
+        int c[10000000];
+        c[a]=-10;
+        printf("%lld",c[a]);
 }

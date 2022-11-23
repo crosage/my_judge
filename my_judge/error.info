@@ -1,10 +1,4 @@
-./getTest.cpp:20:2: error: ‘haha’ does not name a type
-   20 | }haha
-      |  ^~~~
-./getTest.cpp: In function ‘void* monitorThread(void*)’:
-./getTest.cpp:27:22: error: invalid use of incomplete type ‘struct monitorThread(void*)::iwanna’
-   27 |     pid_t pid=killpid->pid;
-      |                      ^~
-./getTest.cpp:26:12: note: forward declaration of ‘struct monitorThread(void*)::iwanna’
-   26 |     struct iwanna *killpid=(struct iwanna *)pidC;
-      |            ^~~~~~
+../getTest.cpp:12:10: fatal error: dealComplie.h: No such file or directory
+   12 | #include "dealComplie.h"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.

@@ -2,7 +2,9 @@
 #include "./judger.h"
 #include<fstream>
 #include<iostream>
+#include "./nlohmann/json.hpp"
 char outString[450],inString[6000000];
+using json=nlohmann::json;
 int main(int argc,char *argv[])
 {
     struct limits limit;
@@ -27,23 +29,14 @@ sudo ./build/myjudge -t 3000 -c 3000 '
     {
         limit.loggerFile=fopen(limit.loggerPath,"a");
         judge(&limit,&result);
-        printf("{\n"
-            "    \"cpu_time\": %d,\n"
-            "    \"real_time\": %d,\n"
-            "    \"memory\": %ld,\n"
-            "    \"exit_code\": %d,\n"
-            "    \"result\": %d,\n"
-            "    \"errorInfo\": \"wrong answer %d line differ - expected \'%s\' , found \'%s\'\"\n"
-            "}",
-            result.cpuTimeCost,
-            result.realTimeCost,
-            result.memoryCost,
-            result.exitCode,
-            result.condition,
-            result.lineNumber,
-            result.stdOut.c_str(),
-            result.errorOut.c_str()
-            );
-        printf("\n");
+        json result_json;
+        result_json["cpuTime"]=result.cpuTimeCost;
+        result_json["realTime"]=result.realTimeCost;
+        result_json["memory"]=result.memoryCost;
+        result_json["exitCode"]=result.exitCode;
+        string res="";
+        res="wrong answer "+to_string(result.lineNumber)+" line differ -expected "+result.stdOut.c_str()+" found "+result.errorOut.c_str();
+        result_json["errorInfo"]=res;
+        cout<<result_json<<endl;
     }
 }

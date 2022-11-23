@@ -1,35 +1,40 @@
 {
     "cpu_time": 0,
     "real_time": 3,
-    "memory": 3532,
+    "memory": 3404,
     "exit_code": 0,
-    "result": 0
+    "result": 0,
+    "errorInfo": "wrong answer 1 line differ - expected '544100485' , found '544100485'"
 }
 {
-    "cpu_time": 59,
-    "real_time": 120,
-    "memory": 3540,
+    "cpu_time": 50,
+    "real_time": 111,
+    "memory": 3580,
     "exit_code": 0,
     "result": 0
+    "errorInfo": "wrong answer 1 line differ - expected '63634560' , found '63634560'"
 }
 {
-    "cpu_time": 165,
-    "real_time": 166,
+    "cpu_time": 128,
+    "real_time": 160,
     "memory": 7620,
     "exit_code": 31,
     "result": 4
+    "errorInfo": "wrong answer 0 line differ - expected '' , found ''"
 }
 {
-    "cpu_time": 120,
+    "cpu_time": 139,
     "real_time": 160,
-    "memory": 7624,
+    "memory": 7492,
     "exit_code": 31,
     "result": 4
+    "errorInfo": "wrong answer 0 line differ - expected '' , found ''"
 }
 {
-    "cpu_time": 166,
-    "real_time": 177,
-    "memory": 7536,
+    "cpu_time": 151,
+    "real_time": 172,
+    "memory": 7548,
     "exit_code": 31,
     "result": 4
+    "errorInfo": "wrong answer 0 line differ - expected '' , found ''"
 }

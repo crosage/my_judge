@@ -1,0 +1,3 @@
+/home/znsbc/my_judge/dealCompile/build/CMakeFiles/rebuild_cache.dir
+/home/znsbc/my_judge/dealCompile/build/CMakeFiles/edit_cache.dir
+/home/znsbc/my_judge/dealCompile/build/CMakeFiles/dealCompile.dir

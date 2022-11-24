@@ -30,14 +30,17 @@ sudo ./build/myjudge -t 3000 -c 3000 '
         limit.loggerFile=fopen(limit.loggerPath,"a");
         judge(&limit,&result);
         json result_json;
-        result_json["cpuTime"]=result.cpuTimeCost;
-        result_json["realTime"]=result.realTimeCost;
+        result_json["cpu_time"]=result.cpuTimeCost;
+        result_json["real_time"]=result.realTimeCost;
         result_json["memory"]=result.memoryCost;
-        result_json["exitCode"]=result.exitCode;
+        result_json["exitcode"]=result.exitCode;
         string res="";
         result_json["result"]=result.condition;
-        res="wrong answer "+to_string(result.lineNumber)+" line differ -expected "+result.stdOut.c_str()+" found "+result.errorOut.c_str();
-        result_json["errorInfo"]=res;
+        if(result.stdOut!=result.errorOut)
+        {    
+            res="wrong answer "+to_string(result.lineNumber)+" line differ -expected "+result.stdOut.c_str()+" found "+result.errorOut.c_str();
+            result_json["error_info"]=res;
+        }
         cout<<result_json<<endl;
     }
 }

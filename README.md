@@ -76,6 +76,29 @@ sudo ./build/myjudge -t 3000 -c 3000 -p ./problems/hell_word/1.myut -r ./problem
 sudo ./build/myjudge -t 3000 -c 3000 -p ./problems/hell_word/1.myut -r ./problems/hell_word/hell_word -i ./problems/hell_word/1.in -o ./problems/hell_word/1.out -l ./logger.txt 
 ```
 
+## 输出示例
+
+### wrong_ans
+```json
+{"cpu_time":47,"error_info":"wrong answer 98 line differ -expected 280 found 208","exitcode":0,"memory":23340,"real_time":49,"result":-1}
+```
+```json
+{"cpu_time":0,"error_info":"wrong answer 2 line differ -expected nishishi found ","exitcode":0,"memory":3368,"real_time":2,"result":-1}
+```
+### Accept
+```json
+{"cpu_time":2,"exitcode":0,"memory":3372,"real_time":3,"result":0}
+```
+### timeout
+```json
+{"cpu_time":3998,"exitcode":9,"memory":3244,"real_time":4000,"result":2}
+```
+### memoryout
+```json
+{"cpu_time":1,"exitcode":11,"memory":1488,"real_time":1,"result":4}
+```
+### 
+
 ## 关于dealComplie
 例子
 ```

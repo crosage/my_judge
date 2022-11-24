@@ -97,9 +97,9 @@ int main(int argc,char *argv[])
         tmp=tmp+" 2>&1";
         json info;
         if(flag)
-            info["compileInfo"]="compile_error";
+            info["compile_info"]="compile_error";
         else 
-            info["compileInfo"]="success";
+            info["compile_info"]="success";
         info["traceback"]=exec(tmp.c_str());
         cout<<info<<endl;
     }

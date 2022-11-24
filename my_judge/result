@@ -1,40 +1,5 @@
-{
-    "cpu_time": 0,
-    "real_time": 3,
-    "memory": 3404,
-    "exit_code": 0,
-    "result": 0,
-    "errorInfo": "wrong answer 1 line differ - expected '544100485' , found '544100485'"
-}
-{
-    "cpu_time": 50,
-    "real_time": 111,
-    "memory": 3580,
-    "exit_code": 0,
-    "result": 0
-    "errorInfo": "wrong answer 1 line differ - expected '63634560' , found '63634560'"
-}
-{
-    "cpu_time": 128,
-    "real_time": 160,
-    "memory": 7620,
-    "exit_code": 31,
-    "result": 4
-    "errorInfo": "wrong answer 0 line differ - expected '' , found ''"
-}
-{
-    "cpu_time": 139,
-    "real_time": 160,
-    "memory": 7492,
-    "exit_code": 31,
-    "result": 4
-    "errorInfo": "wrong answer 0 line differ - expected '' , found ''"
-}
-{
-    "cpu_time": 151,
-    "real_time": 172,
-    "memory": 7548,
-    "exit_code": 31,
-    "result": 4
-    "errorInfo": "wrong answer 0 line differ - expected '' , found ''"
-}
+{"cpu_time":2,"exitcode":0,"memory":3536,"real_time":3,"result":0}
+{"cpu_time":65,"exitcode":0,"memory":3576,"real_time":67,"result":0}
+{"cpu_time":169,"exitcode":31,"memory":7604,"real_time":170,"result":4}
+{"cpu_time":151,"exitcode":31,"memory":7600,"real_time":152,"result":4}
+{"cpu_time":151,"exitcode":31,"memory":7552,"real_time":152,"result":4}

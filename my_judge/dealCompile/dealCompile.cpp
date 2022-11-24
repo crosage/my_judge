@@ -75,7 +75,14 @@ int main(int argc,char *argv[])
         struct iwanna para;
         para.pid=childPid;
         int t=pthread_create(&pthread,NULL,monitorThread,(struct iwanna *)(&childPid));
-        wait4(childPid,NULL,WSTOPPED,NULL);
+        int status;
+        wait4(childPid,&status,WSTOPPED,NULL);
+        json info;
+        if(WTERMSIG(status)==SIGKILL)
+        {
+            info["compile_info"]="compile_timeout";
+            cout<<info<<endl;
+        }
         pthread_cancel(pthread);
     }
     else 

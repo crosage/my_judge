@@ -8,6 +8,6 @@ typedef int logType;
 #define INFO        2
 #define DEBUG       1
 
-void makeLog(logType type, char *content, FILE *loggerFile);
+void makeLog(logType type, char *content, FILE *loggerFile,int id);
 
 #endif

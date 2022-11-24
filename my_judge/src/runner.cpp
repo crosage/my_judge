@@ -25,7 +25,7 @@ void setLimit(struct limits *limit)//设置时间限制和内存限制
         memory_limit.rlim_cur=memory_limit.rlim_max=limit->memoryLimit*2;
         if(setrlimit(RLIMIT_AS,&memory_limit))
         {
-            makeLog(ERROR,"限制出错",limit->loggerFile);    
+            makeLog(ERROR,"set rlimit error",limit->loggerFile,limit->submissionId);    
             exit(memorySetError);   
         }
     }
@@ -33,14 +33,14 @@ void setLimit(struct limits *limit)//设置时间限制和内存限制
     time_limit.rlim_cur=time_limit.rlim_max=(limit->cpuTimeLimit+1000)/1000;
     if(setrlimit(RLIMIT_CPU,&time_limit))
     {
-        makeLog(ERROR,"限制出错",limit->loggerFile);    
+        makeLog(ERROR,"set rlimit error",limit->loggerFile,limit->submissionId);    
         exit(timeSetError);
     }
     struct rlimit maxOutput;
     maxOutput.rlim_cur=maxOutput.rlim_max=limit->outputLimit;
     if(setrlimit(RLIMIT_FSIZE,&maxOutput))
     {
-        makeLog(ERROR,"限制出错",limit->loggerFile);    
+        makeLog(ERROR,"set rlimit error",limit->loggerFile,limit->submissionId);    
         exit(timeSetError);
     }
 }
@@ -62,7 +62,7 @@ void run(struct limits *limit)
         if(!input)
         {
 //            printf("cao\n");
-            makeLog(ERROR,"无法打开输入文件",limit->loggerFile);
+            makeLog(ERROR,"Unable to open input file",limit->loggerFile,limit->submissionId);
             exit(inputNotFound);
         }
         //将键盘输入重定向至该文件
@@ -76,7 +76,7 @@ void run(struct limits *limit)
         output=fopen(limit->outputPath,"w");
         if(!output)
         {
-            makeLog(ERROR,"无法打开输出文件",limit->loggerFile);
+            makeLog(ERROR,"Unable to open output file",limit->loggerFile,limit->submissionId);
             exit(outputCantMake);
         }
         //将键盘输出重定向至该文件
@@ -89,7 +89,7 @@ void run(struct limits *limit)
         errFile=fopen(limit->errorPath,"w");
         if(!errFile)
         {
-            makeLog(ERROR,"无法打开错误文件",limit->loggerFile);
+            makeLog(ERROR,"Unable to open stderr file",limit->loggerFile,limit->submissionId);
             exit(errorCantFound);
         }
         int f=fileno(errFile);
@@ -103,7 +103,7 @@ void run(struct limits *limit)
         if(setuid(limit->uid)==-1)
         {
 //            printf("exit\n");
-            makeLog(ERROR,"设置uid错误",limit->loggerFile);
+            makeLog(ERROR,"Set uid error",limit->loggerFile,limit->submissionId);
             exit(uidError);
         }
     }
@@ -119,7 +119,7 @@ void run(struct limits *limit)
         char *envp[]={"PATH=/bin",0};
 //    printf("运行了 %s\n",limit->execPath);
         if(execve(limit->execPath,NULL,envp))
-            makeLog(FATAL,"执行出错",limit->loggerFile);
+            makeLog(FATAL,"Execve error",limit->loggerFile,limit->submissionId);
     }
     else if(!strcmp(limit->type,"python")||!strcmp(limit->type,"py"))
     {
@@ -133,7 +133,7 @@ void run(struct limits *limit)
 //        cout<<tmptmp<<endl;
 //        system("ls");
         if(execve("/usr/bin/python3",argv,envp))
-            makeLog(FATAL,"执行出错",limit->loggerFile);
+            makeLog(FATAL,"Execve error",limit->loggerFile,limit->submissionId);
 //            printf("*asd8*as8*asd8*asd\n");
     }
     else if(!strcmp(limit->type,"java"))
@@ -147,10 +147,10 @@ void run(struct limits *limit)
 //        char *envp[]={"PATH=/bin",0};
 //        cout<<tmp1.c_str()<<" "<<tmp2.c_str()<<endl;
         if(execve("/usr/bin/java",argv,NULL))
-            makeLog(FATAL,"执行出错",limit->loggerFile);
+            makeLog(FATAL,"Execve error",limit->loggerFile,limit->submissionId);
     }
     else
     {
-        makeLog(FATAL,"不支持的文件类型",limit->loggerFile);
+        makeLog(FATAL,"Unsupported file type",limit->loggerFile,limit->submissionId);
     }
 }

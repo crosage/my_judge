@@ -12,6 +12,7 @@ void init(struct limits *limit,struct judgeResult *result)
     limit->execPath="\0";
     limit->type="\0";
     limit->loggerPath="./main.log";
+    limit->submissionId=-1;
     limit->uid=uidDefeat;
     limit->jar=0;
     result->lineNumber=0;
@@ -49,7 +50,7 @@ void showUsage() {
 int setOptions(int argc,char *argv[],struct limits *limit)
 {
     int opt;
-    while ((opt = getopt(argc, argv, "t:c:m:f:o:e:i:r:l:h::u:g:p:y:")) != -1) 
+    while ((opt = getopt(argc, argv, "t:c:m:f:o:e:i:r:l:h::u:g:p:y:s:")) != -1) 
     {
         switch (opt) 
         {
@@ -91,6 +92,9 @@ int setOptions(int argc,char *argv[],struct limits *limit)
                 break;
             case 'g':
                 limit->guard = atoi(optarg);
+                break;
+            case 's':
+                limit->submissionId=atoi(optarg);
                 break;
             case 'h':
                 showUsage();

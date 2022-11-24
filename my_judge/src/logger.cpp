@@ -1,7 +1,10 @@
 #include <time.h>
 #include <stdio.h>
-#include "logger.h"
+#include<cstring>
+#include<string>
 
+#include "logger.h"
+using namespace std;
 void outputCurrentTime(FILE *loggerFile) {
 
     time_t rawTime = time(NULL);
@@ -33,13 +36,21 @@ void outputLoggerType(logType type, FILE *loggerFile) {
     fprintf(loggerFile, "]");
 }
 
+void outputSubmissionId(FILE *loggerFile)
+{
 
-void makeLog(logType type, char *content, FILE *loggerFile) {
+    fprintf(loggerFile,"");
+}
+
+void makeLog(logType type, char *content, FILE *loggerFile,int id) {
     if (loggerFile == NULL) return;
     /*输出类型*/
     outputLoggerType(type, loggerFile);
     /*获取生成日志的时间*/
     outputCurrentTime(loggerFile);
+    string s="";
+    s=" submissionId:"+to_string(id)+" ";
+    fprintf(loggerFile,s.c_str());
     fprintf(loggerFile,"%s\n", content);
 }
 

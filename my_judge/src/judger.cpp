@@ -47,7 +47,7 @@ void judge(struct limits *limit,struct judgeResult *result)
     if(!isRoot())
     {
         result->condition=NOT_ROOT_USER;
-        makeLog(ERROR,"非ROOT用户",limit->loggerFile);
+        makeLog(ERROR,"Non-root user",limit->loggerFile,limit->submissionId);
         return ;
     }
 
@@ -61,7 +61,7 @@ void judge(struct limits *limit,struct judgeResult *result)
     {
         result->condition=SYSTEM_ERROR;
         result->exitCode=forkFailed;
-        makeLog(ERROR,"无法fork子进程",limit->loggerFile);
+        makeLog(ERROR,"Cant fork child process",limit->loggerFile,limit->submissionId);
         return ;
     }
     else if(childPid>0)//父进程
@@ -77,7 +77,7 @@ void judge(struct limits *limit,struct judgeResult *result)
         if(t!=0)
         {
             result->condition=SYSTEM_ERROR;
-            makeLog(ERROR,"监视线程创建失败",limit->loggerFile);
+            makeLog(ERROR,"Monitor thread creation failure",limit->loggerFile,limit->submissionId);
             return ;
         }        
         int status=0;
@@ -151,7 +151,7 @@ void judge(struct limits *limit,struct judgeResult *result)
             }
             else if(WTERMSIG(status)==31)
             {
-                makeLog(FATAL,"非法代码",limit->loggerFile);
+                makeLog(FATAL,"non-compliant code",limit->loggerFile,limit->submissionId);
                 result->condition=RUNTIME_ERROR;
             }//包含SIGSEGV 
             else result->condition=RUNTIME_ERROR;

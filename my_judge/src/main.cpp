@@ -38,7 +38,7 @@ sudo ./build/myjudge -t 3000 -c 3000 '
         result_json["result"]=result.condition;
         if(result.stdOut!=result.errorOut)
         {    
-            res="wrong answer "+to_string(result.lineNumber)+" line differ -expected "+result.stdOut.c_str()+" found "+result.errorOut.c_str();
+            res="wrong answer "+to_string(result.lineNumber)+" line differ -expected \""+result.stdOut.c_str()+"\" found \""+result.errorOut.c_str()+"\"";
             result_json["error_info"]=res;
         }
         cout<<result_json<<endl;

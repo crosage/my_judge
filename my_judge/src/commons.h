@@ -41,6 +41,7 @@ struct limits{
     char * type;
     FILE * loggerFile;
     uid_t uid;
+    int submissionId;//用于把错误信息输出到
     int guard;
     int jar;
 };

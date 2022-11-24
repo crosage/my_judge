@@ -1,3 +1,0 @@
-/home/znsbc/my_judge/build/CMakeFiles/rebuild_cache.dir
-/home/znsbc/my_judge/build/CMakeFiles/edit_cache.dir
-/home/znsbc/my_judge/build/CMakeFiles/myjudge.dir

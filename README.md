@@ -20,6 +20,7 @@ chmod 777 ./build.sh
 - p:选手输出文件路径
 - y:是什么类型的文件 python java c等
 - h:帮助
+- s:submit编号
 
 ## myjudge的返回结果示例
 ``` json

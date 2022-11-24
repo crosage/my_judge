@@ -1,0 +1,5 @@
+{"cpu_time":2,"exitcode":0,"memory":3380,"real_time":2,"result":0}
+{"cpu_time":66,"exitcode":0,"memory":3388,"real_time":67,"result":0}
+{"cpu_time":140,"exitcode":31,"memory":7552,"real_time":141,"result":4}
+{"cpu_time":144,"exitcode":31,"memory":7568,"real_time":145,"result":4}
+{"cpu_time":140,"exitcode":31,"memory":7532,"real_time":140,"result":4}

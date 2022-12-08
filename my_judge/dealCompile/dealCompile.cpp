@@ -104,9 +104,9 @@ int main(int argc,char *argv[])
         tmp=tmp+" 2>&1";
         json info;
         if(flag)
-            info["compile_info"]="compile_error";
+            info["compile_info"]="error";
         else 
-            info["compile_info"]="success";
+            info["compile_info"]="pass";
         info["traceback"]=exec(tmp.c_str());
         cout<<info<<endl;
     }

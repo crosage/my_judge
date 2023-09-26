@@ -94,7 +94,7 @@ sudo ./build/myjudge -t 3000 -c 3000 -p ./problems/hell_word/1.myut -r ./problem
 ```json
 {"cpu_time":3998,"exitcode":9,"memory":3244,"real_time":4000,"result":2}
 ```
-### memoryout
+### runtime error
 ```json
 {"cpu_time":1,"exitcode":11,"memory":1488,"real_time":1,"result":4}
 ```
